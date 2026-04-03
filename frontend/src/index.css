@@ -1,1 +1,72 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap');
+
+:root {
+  --bg: #0f0e0c;
+  --card: #1c1a16;
+  --border: #2e2b24;
+
+  --gold: #e8c97a;
+  --red: #e06b6b;
+  --green: #6bb88e;
+  --purple: #7b8fe8;
+
+  --text: #eae7df;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+
+  /* subtle grid pattern */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* headings */
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* smooth fade animation */
+.fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* buttons */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* cards */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.glass {
+  background: rgba(28, 26, 22, 0.7);
+  backdrop-filter: blur(10px);
+}
